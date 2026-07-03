@@ -68,33 +68,41 @@ const TECHS: Tech[] = [
 
 function TechItem({ name, Icon }: Tech) {
   return (
-    <span className="group/item flex shrink-0 items-center gap-2.5 text-muted transition-colors duration-200 hover:text-text">
-      <Icon className="h-5 w-5" aria-hidden />
-      <span className="text-sm whitespace-nowrap">{name}</span>
+    <span className="group/item flex shrink-0 items-center gap-3 text-muted transition-colors duration-200 hover:text-text">
+      <Icon className="h-9 w-9" aria-hidden />
+      <span className="text-base whitespace-nowrap">{name}</span>
     </span>
   );
 }
 
 export function TechStrip() {
   return (
-    <section aria-label="Technologies I work with" className="border-y border-hair py-12">
-      <div className="mx-auto max-w-[1200px] px-6">
-        <p className="mb-8 flex items-center gap-2.5 text-xs uppercase tracking-[0.14em] text-muted">
+    <section aria-label="Technologies I work with" className="border-y border-hair py-14">
+      <div className="mx-auto max-w-[1200px] px-6 text-center">
+        <p className="mb-10 inline-flex items-center gap-2.5 text-xs uppercase tracking-[0.14em] text-muted">
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent" aria-hidden />
           The stack I&apos;ve shipped with
         </p>
       </div>
 
-      <div className="marquee-mask overflow-hidden">
-        <div className="marquee-track flex w-max items-center gap-x-10 px-5">
-          {TECHS.map((t) => (
-            <TechItem key={t.name} {...t} />
-          ))}
-          {/* Seamless-loop duplicate, hidden from assistive tech + reduced-motion. */}
-          <div className="marquee-dupe flex items-center gap-x-10" aria-hidden>
-            {TECHS.map((t) => (
-              <TechItem key={`dup-${t.name}`} {...t} />
-            ))}
+      <div className="mx-auto max-w-[1200px] px-6">
+        <div className="marquee-mask overflow-hidden">
+          <div className="marquee-track flex w-max">
+            {/* Two equal-width sets so a -50% translate loops seamlessly. */}
+            <ul className="marquee-set flex items-center gap-x-14 pr-14">
+              {TECHS.map((t) => (
+                <li key={t.name}>
+                  <TechItem {...t} />
+                </li>
+              ))}
+            </ul>
+            <ul className="marquee-set marquee-dupe flex items-center gap-x-14 pr-14" aria-hidden>
+              {TECHS.map((t) => (
+                <li key={`dup-${t.name}`}>
+                  <TechItem {...t} />
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
