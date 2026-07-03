@@ -16,7 +16,7 @@ export function Hero() {
         Saad Bhutto · AI-Native Tech Lead · Melbourne, open to remote
       </div>
 
-      <h1 className="font-display max-w-[16ch] text-[2.6rem] leading-[1.02] sm:text-6xl md:max-w-5xl md:text-[5.2rem]">
+      <h1 className="font-display max-w-4xl text-[2rem] leading-[1.1] sm:text-4xl md:text-5xl lg:text-[3.4rem]">
         <WordReveal text={hero.line1} tone="muted" className="text-muted" />{" "}
         <WordReveal text={hero.line2} tone="bright" className="text-text" />
       </h1>
