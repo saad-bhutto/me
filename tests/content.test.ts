@@ -3,7 +3,7 @@ import { hero, caseStudies, comparison, services, impact, contact, EMAIL_HREF } 
 
 test("hero headline positions full-stack engineer + AI-native tech lead", () => {
   expect(hero.line1).toBe("Full-stack engineer. AI-native tech lead.");
-  expect(hero.line2).toBe("I ship production AI and lead the teams behind it.");
+  expect(hero.line2).toBe("I ship agents, RAG pipelines and MCP infrastructure to production.");
 });
 
 test("primary CTA is the mailto email", () => {

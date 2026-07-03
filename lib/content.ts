@@ -10,7 +10,7 @@ export const nav = [
 
 export const hero = {
   line1: "Full-stack engineer. AI-native tech lead.",
-  line2: "I ship production AI and lead the teams behind it.",
+  line2: "I ship agents, RAG pipelines and MCP infrastructure to production.",
   subtext:
     "10+ years across TypeScript, Python, PHP/Laravel and AWS — now building RAG pipelines, AI agents and MCP infrastructure, and leading engineering teams to ship them. Based in Melbourne, open to remote.",
   ctaPrimary: { label: "Get in touch", href: EMAIL_HREF },
