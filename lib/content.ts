@@ -5,7 +5,7 @@ export const nav = [
   { label: "About", href: "#about" },
   { label: "Expertise", href: "#services" },
   { label: "Impact", href: "#impact" },
-  { label: "Insights", href: "#insights" },
+  // { label: "Insights", href: "#insights" }, // hidden for now
 ];
 
 export const hero = {

@@ -7,7 +7,7 @@ import { ComparisonTable } from "@/components/comparison-table";
 import { Services } from "@/components/services";
 import { Impact } from "@/components/impact";
 import { IntegrationsCarousel } from "@/components/integrations-carousel";
-import { Insights } from "@/components/insights";
+// import { Insights } from "@/components/insights"; // hidden for now
 import { FooterCta } from "@/components/footer-cta";
 import { Footer } from "@/components/footer";
 
@@ -24,7 +24,7 @@ export default function Home() {
         <Services />
         <Impact />
         <IntegrationsCarousel />
-        <Insights />
+        {/* <Insights /> hidden for now */}
         <FooterCta />
       </main>
       <Footer />

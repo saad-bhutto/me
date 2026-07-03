@@ -1,6 +1,12 @@
 "use client";
 import { useEffect, useState } from "react";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { nav, EMAIL_HREF } from "@/lib/content";
+
+const SOCIAL_LINKS = [
+  { label: "LinkedIn", href: "https://linkedin.com/in/saadbhutto", Icon: FaLinkedinIn },
+  { label: "GitHub", href: "https://github.com/saad-bhutto", Icon: FaGithub },
+];
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -37,6 +43,20 @@ export function Nav() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <div className="hidden items-center gap-1 sm:flex">
+            {SOCIAL_LINKS.map(({ label, href, Icon }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={label}
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-hair text-muted transition-colors hover:border-white/25 hover:text-text"
+              >
+                <Icon className="h-4 w-4" aria-hidden />
+              </a>
+            ))}
+          </div>
           <a
             href={EMAIL_HREF}
             className="hidden rounded-full bg-white px-4 py-2 text-sm font-medium text-black transition-opacity hover:opacity-90 sm:inline-flex"
@@ -90,6 +110,20 @@ export function Nav() {
             >
               Contact
             </a>
+            <div className="mt-3 flex items-center gap-2 border-t border-hair pt-4">
+              {SOCIAL_LINKS.map(({ label, href, Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={label}
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-hair text-muted hover:text-text"
+                >
+                  <Icon className="h-4 w-4" aria-hidden />
+                </a>
+              ))}
+            </div>
           </nav>
         </div>
       )}
