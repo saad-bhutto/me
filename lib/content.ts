@@ -2,6 +2,7 @@ export const EMAIL_HREF = "mailto:saadbhutto@ymail.com";
 
 export const nav = [
   { label: "Work", href: "#work" },
+  { label: "About", href: "#about" },
   { label: "Expertise", href: "#services" },
   { label: "Impact", href: "#impact" },
   { label: "Insights", href: "#insights" },
@@ -21,21 +22,25 @@ export const caseStudies = [
     title: "Production RAG pipeline",
     outcome: "Grounded internal assistants on company data — zero critical data leaks.",
     tags: ["Python", "pgvector", "MCP", "Guardrails"],
+    visual: "rag" as const,
   },
   {
     title: "AI recommendation engine",
     outcome: "~30% checkout conversion uplift, owned end-to-end.",
     tags: ["TypeScript", "Laravel", "AWS Personalize", "Algolia"],
+    visual: "reco" as const,
   },
   {
     title: "Multi-agent competitive intelligence",
     outcome: "Automated daily competitor digest via Slack & email.",
     tags: ["Cloudflare Workers", "Supabase", "Agents"],
+    visual: "agents" as const,
   },
   {
     title: "Internal MCP developer tooling",
     outcome: "Automated code review, research docs & boilerplate across squads.",
     tags: ["Laravel AI SDK", "MCP servers"],
+    visual: "mcp" as const,
   },
 ];
 
@@ -107,6 +112,19 @@ export const contact = {
   email: "saadbhutto@ymail.com",
   linkedin: "https://linkedin.com/in/saadbhutto",
   location: "Melbourne, VIC",
+};
+
+export const about = {
+  heading: "I lead from inside the codebase.",
+  paragraphs: [
+    "I'm Saad — an AI-native tech lead and senior full-stack engineer with 10+ years shipping products across e-commerce, SaaS and travel tech. I led a nine-engineer squad through 2× growth with no drop in quality or velocity.",
+    "I stay hands-on: production RAG pipelines, agentic systems and MCP servers on one side; TypeScript, Python and PHP/Laravel on AWS and Cloudflare on the other. I measure success in business outcomes — a ~30% conversion lift, 60% faster incident recovery — not just clean code.",
+  ],
+  facts: [
+    { label: "Based in", value: "Melbourne, VIC" },
+    { label: "Experience", value: "10+ years" },
+    { label: "Availability", value: "Full-time / remote" },
+  ],
 };
 
 export const footer = {

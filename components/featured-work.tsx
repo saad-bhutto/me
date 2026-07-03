@@ -1,5 +1,6 @@
 import { caseStudies } from "@/lib/content";
 import { SectionHeading } from "@/components/section-heading";
+import { CaseVisual } from "@/components/case-visual";
 
 export function FeaturedWork() {
   return (
@@ -19,15 +20,11 @@ export function FeaturedWork() {
             key={c.title}
             className="group relative overflow-hidden rounded-2xl border border-hair bg-surface/40 p-6 transition-all duration-300 hover:border-white/20 hover:bg-surface/70 md:p-8"
           >
-            {/* Visual band: layered gradient with a faint accent glow + ghost index */}
-            <div className="relative mb-7 flex aspect-[16/9] items-end overflow-hidden rounded-xl border border-hair bg-surface-2">
-              <div className="absolute inset-0 bg-[radial-gradient(120%_120%_at_100%_0%,rgba(251,65,30,0.16),transparent_55%)]" />
-              <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent,rgba(0,0,0,0.4))]" />
-              <span className="font-display pointer-events-none absolute -right-2 -top-6 text-[7rem] leading-none text-white/[0.05] transition-transform duration-500 group-hover:scale-110">
+            {/* Concept visual for the project */}
+            <div className="relative mb-7">
+              <CaseVisual kind={c.visual} />
+              <span className="font-display pointer-events-none absolute right-3 top-2 text-3xl leading-none text-white/10">
                 {String(i + 1).padStart(2, "0")}
-              </span>
-              <span className="relative m-5 rounded-full border border-hair bg-black/40 px-3 py-1 font-mono text-xs text-muted backdrop-blur">
-                {c.tags[0]}
               </span>
             </div>
 

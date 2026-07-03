@@ -5,7 +5,7 @@ import Home from "@/app/page";
 test("full page renders one h1 and all section anchors", () => {
   render(<Home />);
   expect(screen.getAllByRole("heading", { level: 1 })).toHaveLength(1);
-  ["work", "services", "impact", "insights", "contact"].forEach((id) => {
+  ["work", "about", "services", "impact", "insights", "contact"].forEach((id) => {
     expect(document.getElementById(id)).not.toBeNull();
   });
 });

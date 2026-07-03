@@ -6,6 +6,7 @@ test("nav renders monogram, all section links, and a Contact button", () => {
   render(<Nav />);
   expect(screen.getByText("SB")).toBeInTheDocument();
   expect(screen.getByRole("link", { name: "Work" })).toHaveAttribute("href", "#work");
+  expect(screen.getByRole("link", { name: "About" })).toHaveAttribute("href", "#about");
   expect(screen.getByRole("link", { name: "Expertise" })).toHaveAttribute("href", "#services");
   const contact = screen.getByRole("link", { name: /contact/i });
   expect(contact).toHaveAttribute("href", "mailto:saadbhutto@ymail.com");

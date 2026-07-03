@@ -2,6 +2,7 @@ import { Nav } from "@/components/nav";
 import { Hero } from "@/components/hero";
 import { TechStrip } from "@/components/tech-strip";
 import { FeaturedWork } from "@/components/featured-work";
+import { About } from "@/components/about";
 import { ComparisonTable } from "@/components/comparison-table";
 import { Services } from "@/components/services";
 import { Impact } from "@/components/impact";
@@ -18,6 +19,7 @@ export default function Home() {
         <Hero />
         <TechStrip />
         <FeaturedWork />
+        <About />
         <ComparisonTable />
         <Services />
         <Impact />
