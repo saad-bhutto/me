@@ -13,7 +13,7 @@ export function Hero() {
           <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
           <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
         </span>
-        Saad Bhutto — AI Tech Lead · Available for new work
+        Saad Bhutto · AI-Native Tech Lead · Melbourne, open to remote
       </div>
 
       <h1 className="font-display max-w-[16ch] text-[2.6rem] leading-[1.02] sm:text-6xl md:max-w-5xl md:text-[5.2rem]">

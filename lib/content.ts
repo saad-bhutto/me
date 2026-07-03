@@ -2,18 +2,18 @@ export const EMAIL_HREF = "mailto:saadbhutto@ymail.com";
 
 export const nav = [
   { label: "Work", href: "#work" },
-  { label: "Services", href: "#services" },
+  { label: "Expertise", href: "#services" },
   { label: "Impact", href: "#impact" },
   { label: "Insights", href: "#insights" },
 ];
 
 export const hero = {
-  line1: "Not an agency. Not a team of consultants.",
-  line2: "I build AI agents and MCP infrastructure for enterprises.",
+  line1: "Full-stack engineer. AI-native tech lead.",
+  line2: "I ship production AI systems — and lead the teams that build them.",
   subtext:
-    "Senior AI engineering — RAG pipelines, agentic systems, MCP servers, and responsible-AI governance — deployed to production. Without the agency overhead or the six-month hire.",
+    "10+ years across TypeScript, Python, PHP/Laravel and AWS — now building RAG pipelines, AI agents and MCP infrastructure, and leading engineering teams to ship them. Based in Melbourne, open to remote.",
   ctaPrimary: { label: "Get in touch", href: EMAIL_HREF },
-  ctaSecondary: { label: "See work", href: "#work" },
+  ctaSecondary: { label: "See my work", href: "#work" },
 };
 
 export const caseStudies = [
@@ -39,41 +39,71 @@ export const caseStudies = [
   },
 ];
 
+// Positioning device: shows the rare full-stack + AI + leadership combination.
+// Column 0 is Saad (highlighted); the others are the typical single-lane profiles.
 export const comparison = {
-  columns: ["Fractional AI Lead", "AI Agency", "Full-time hire"],
+  columns: ["AI-Native Tech Lead", "AI specialist", "Engineering manager"],
   rows: [
-    { dimension: "Time to start", values: ["Days", "2–4 weeks", "3–6 months"] as [string, string, string] },
-    { dimension: "Who you work with", values: ["Principal engineer", "Account manager", "Whoever you find"] as [string, string, string] },
-    { dimension: "Commitment", values: ["Flexible", "Project lock-in", "Salary + benefits"] as [string, string, string] },
-    { dimension: "Overhead", values: ["None", "Agency margins", "HR, onboarding, ramp-up"] as [string, string, string] },
+    {
+      dimension: "Ships production code",
+      values: ["Daily — full-stack", "Models, not products", "Reviews, rarely writes"] as [string, string, string],
+    },
+    {
+      dimension: "Leads & grows teams",
+      values: ["Led 9, through 2× growth", "Individual contributor", "Yes"] as [string, string, string],
+    },
+    {
+      dimension: "Production AI / LLM systems",
+      values: ["RAG, agents, MCP", "Yes", "Rarely hands-on"] as [string, string, string],
+    },
+    {
+      dimension: "Owns business outcomes",
+      values: ["+30% conversion, 60% MTTR", "Model metrics", "Team metrics"] as [string, string, string],
+    },
   ],
 };
 
 export const services = [
-  { title: "AI Agents & Agentic Systems", description: "Multi-step agents with tool and function calling, orchestrated on Cloudflare Workers and AWS Bedrock." },
-  { title: "MCP Infrastructure", description: "Custom MCP servers wiring internal tools and data into LLM workflows — with guardrails and audit logging." },
-  { title: "RAG Pipelines", description: "pgvector retrieval grounded on your data, with evaluation and output guardrails you can trust." },
-  { title: "AI Governance & Enablement", description: "Responsible-AI frameworks, tooling profiles, and prompt patterns adopted org-wide — without mandate." },
+  {
+    title: "AI Agents & Agentic Systems",
+    description:
+      "Multi-step agents with tool and function calling, orchestrated on Cloudflare Workers and AWS Bedrock.",
+  },
+  {
+    title: "RAG & MCP Infrastructure",
+    description:
+      "Production retrieval over pgvector and custom MCP servers that wire your data and tools into LLM workflows — with guardrails and audit logging.",
+  },
+  {
+    title: "Full-Stack Product Engineering",
+    description:
+      "End-to-end delivery in TypeScript, React/Next.js, Python and PHP/Laravel on AWS — from database schema to shipped UI.",
+  },
+  {
+    title: "Engineering Leadership",
+    description:
+      "Leading and growing teams, design reviews, and rolling out responsible-AI practices org-wide — without slowing delivery.",
+  },
 ];
 
 export const impact = [
-  { value: "~30%", label: "checkout conversion uplift — AI recommendation engine" },
-  { value: "60%", label: "incident MTTR reduction — Datadog APM + GitHub Actions" },
-  { value: "45%", label: "database load reduction — caching & query optimisation" },
-  { value: "2×", label: "team scaled to 9 engineers — zero quality or velocity regression" },
+  { value: "~30%", label: "checkout conversion uplift — AI recommendation engine, owned end-to-end" },
+  { value: "60%", label: "faster incident recovery (MTTR) — Datadog APM + GitHub Actions" },
+  { value: "45%", label: "database load reduction — caching & query optimisation at scale" },
+  { value: "2×", label: "team growth led to 9 engineers — zero quality or velocity regression" },
   { value: "1st", label: "place — company-wide AI Developer Competition" },
-  { value: "10+", label: "years hands-on — Python, PHP/Laravel, TypeScript, AWS" },
+  { value: "10+", label: "years shipping full-stack — Python, TypeScript, PHP/Laravel, AWS" },
 ];
 
 export const insights = [
   { category: "AI Engineering", title: "Shipping your first production RAG pipeline", date: "2026" },
-  { category: "MCP", title: "Why MCP servers change internal tooling", date: "2026" },
-  { category: "Leadership", title: "Rolling out AI governance without a mandate", date: "2026" },
+  { category: "MCP", title: "Why MCP servers are the new internal API", date: "2026" },
+  { category: "Leadership", title: "Staying hands-on as an AI-native tech lead", date: "2026" },
 ];
 
 export const contact = {
-  heading: "Let's see if we're a good fit.",
-  lede: "A straight answer on whether I'm the right fit for your AI roadmap — no sales pressure, no follow-up campaigns.",
+  heading: "Let's build something exceptional.",
+  lede: "Hiring an AI-native tech lead, or need a senior engineer who ships? Tell me what you're working on — I read every message.",
   email: "saadbhutto@ymail.com",
   linkedin: "https://linkedin.com/in/saadbhutto",
   location: "Melbourne, VIC",

@@ -16,5 +16,5 @@ test("hero shows both headline lines and both CTAs", () => {
   expect(normalize(line1Span?.textContent || "")).toBe(normalize(hero.line1));
   expect(normalize(line2Span?.textContent || "")).toBe(normalize(hero.line2));
   expect(screen.getByRole("link", { name: "Get in touch" })).toHaveAttribute("href", "mailto:saadbhutto@ymail.com");
-  expect(screen.getByRole("link", { name: "See work" })).toHaveAttribute("href", "#work");
+  expect(screen.getByRole("link", { name: "See my work" })).toHaveAttribute("href", "#work");
 });

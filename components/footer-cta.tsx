@@ -11,7 +11,7 @@ export function FooterCta() {
           className="absolute inset-x-0 top-0 h-64 bg-[radial-gradient(60%_100%_at_50%_0%,rgba(251,65,30,0.16),transparent_70%)]"
         />
         <div className="relative">
-          <p className="mb-6 text-xs uppercase tracking-[0.14em] text-muted">Ready to start?</p>
+          <p className="mb-6 text-xs uppercase tracking-[0.14em] text-muted">Let&apos;s talk</p>
           <h2 className="font-display mx-auto max-w-3xl text-4xl md:text-[3.8rem]">
             <WordReveal text={contact.heading} />
           </h2>

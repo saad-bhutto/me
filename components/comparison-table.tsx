@@ -9,10 +9,10 @@ export function ComparisonTable() {
     <section className="mx-auto max-w-[1200px] px-6 py-28 md:py-36">
       <p className="mb-5 flex items-center gap-2.5 text-xs uppercase tracking-[0.14em] text-muted">
         <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent" aria-hidden />
-        THE DIFFERENCE
+        THE COMBINATION
       </p>
       <h2 className="font-display max-w-3xl text-3xl sm:text-4xl md:text-[3.4rem]">
-        <WordReveal text="Skip the hiring queue. Ship AI now." />
+        <WordReveal text="Most engineers pick a lane. I work across all three." />
       </h2>
 
       <div className="mt-14 overflow-x-auto">
@@ -22,7 +22,7 @@ export function ComparisonTable() {
               <th className="w-[28%] py-5 pr-4 font-normal" />
               <th className="relative rounded-t-2xl border border-b-0 border-accent/30 bg-accent/[0.07] px-5 py-5 align-bottom">
                 <span className="absolute right-4 top-4 rounded-full bg-accent px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-black">
-                  You
+                  Me
                 </span>
                 <span className="text-base font-medium text-text">{you}</span>
               </th>

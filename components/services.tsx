@@ -5,7 +5,7 @@ export function Services() {
   return (
     <section className="mx-auto max-w-[1200px] px-6 py-28 md:py-36">
       <SectionHeading id="services" eyebrow="WHAT I DO">
-        You don&apos;t need a full AI team. You need the right expertise at the right time.
+        Where I create the most leverage for a team.
       </SectionHeading>
 
       <div className="mt-14 grid gap-5 md:grid-cols-2">

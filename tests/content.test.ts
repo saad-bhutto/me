@@ -1,9 +1,9 @@
 // tests/content.test.ts
 import { hero, caseStudies, comparison, services, impact, contact, EMAIL_HREF } from "@/lib/content";
 
-test("hero headline is verbatim per spec", () => {
-  expect(hero.line1).toBe("Not an agency. Not a team of consultants.");
-  expect(hero.line2).toBe("I build AI agents and MCP infrastructure for enterprises.");
+test("hero headline positions full-stack engineer + AI-native tech lead", () => {
+  expect(hero.line1).toBe("Full-stack engineer. AI-native tech lead.");
+  expect(hero.line2).toBe("I ship production AI systems — and lead the teams that build them.");
 });
 
 test("primary CTA is the mailto email", () => {
