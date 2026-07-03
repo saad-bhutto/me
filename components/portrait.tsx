@@ -25,7 +25,7 @@ export function Portrait() {
         // eslint-disable-next-line @next/next/no-img-element
         <img
           ref={imgRef}
-          src="/portrait.jpg"
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/portrait.jpg`}
           alt="Saad Bhutto — AI-native tech lead and full-stack engineer"
           onError={() => setFailed(true)}
           className="relative block h-auto w-full"
