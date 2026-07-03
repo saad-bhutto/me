@@ -21,16 +21,54 @@
   --font-sans: var(--font-inter);
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-inter), sans-serif;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  /* Atmospheric depth: a faint warm glow from the top, fading to pure black. */
+  background-image:
+    radial-gradient(120% 60% at 50% -10%, rgba(251, 65, 30, 0.06), transparent 55%),
+    radial-gradient(90% 50% at 85% 8%, rgba(255, 255, 255, 0.025), transparent 60%);
+  background-attachment: fixed;
 }
-.font-display { letter-spacing: -0.02em; font-weight: 400; line-height: 1.05; }
-.tracking-tight-2 { letter-spacing: -0.02em; }
+
+/* Display headings: Inter at regular weight, optical-size tightened tracking. */
+.font-display {
+  letter-spacing: -0.032em;
+  font-weight: 400;
+  line-height: 1.04;
+}
+.tracking-tight-2 {
+  letter-spacing: -0.02em;
+}
+
+/* Accent selection to reinforce the single hot color. */
+::selection {
+  background: var(--accent);
+  color: #000;
+}
+
+/* Hairline used as section separators / eyebrow rule. */
+.rule {
+  height: 1px;
+  background: linear-gradient(90deg, var(--border), transparent);
+}
 
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
 }

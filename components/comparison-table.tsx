@@ -3,30 +3,53 @@ import { WordReveal } from "@/components/word-reveal";
 
 export function ComparisonTable() {
   const [you, agency, hire] = comparison.columns;
+  const rows = comparison.rows;
+
   return (
-    <section className="mx-auto max-w-[1200px] px-6 py-24">
-      <h2 className="font-display max-w-3xl text-3xl md:text-5xl">
+    <section className="mx-auto max-w-[1200px] px-6 py-28 md:py-36">
+      <p className="mb-5 flex items-center gap-2.5 text-xs uppercase tracking-[0.14em] text-muted">
+        <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent" aria-hidden />
+        THE DIFFERENCE
+      </p>
+      <h2 className="font-display max-w-3xl text-3xl sm:text-4xl md:text-[3.4rem]">
         <WordReveal text="Skip the hiring queue. Ship AI now." />
       </h2>
-      <div className="mt-12 overflow-x-auto">
-        <table className="w-full border-collapse text-left">
+
+      <div className="mt-14 overflow-x-auto">
+        <table className="w-full min-w-[640px] border-separate border-spacing-0 text-left">
           <thead>
-            <tr className="text-sm text-muted">
-              <th className="py-4 pr-4 font-normal" />
-              <th className="rounded-t-xl bg-surface px-4 py-4 font-medium text-text">{you}</th>
-              <th className="px-4 py-4 font-normal">{agency}</th>
-              <th className="px-4 py-4 font-normal">{hire}</th>
+            <tr className="align-bottom">
+              <th className="w-[28%] py-5 pr-4 font-normal" />
+              <th className="relative rounded-t-2xl border border-b-0 border-accent/30 bg-accent/[0.07] px-5 py-5 align-bottom">
+                <span className="absolute right-4 top-4 rounded-full bg-accent px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-black">
+                  You
+                </span>
+                <span className="text-base font-medium text-text">{you}</span>
+              </th>
+              <th className="px-5 py-5 text-base font-normal text-muted">{agency}</th>
+              <th className="px-5 py-5 text-base font-normal text-muted">{hire}</th>
             </tr>
           </thead>
           <tbody>
-            {comparison.rows.map((row, i) => (
-              <tr key={row.dimension} className="border-t border-hair align-top">
-                <td className="py-4 pr-4 text-muted">{row.dimension}</td>
-                <td className={`bg-surface px-4 py-4 text-text ${i === comparison.rows.length - 1 ? "rounded-b-xl" : ""}`}>{row.values[0]}</td>
-                <td className="px-4 py-4 text-muted">{row.values[1]}</td>
-                <td className="px-4 py-4 text-muted">{row.values[2]}</td>
-              </tr>
-            ))}
+            {rows.map((row, i) => {
+              const last = i === rows.length - 1;
+              return (
+                <tr key={row.dimension} className="group">
+                  <td className="border-t border-hair py-5 pr-4 text-sm text-muted">
+                    {row.dimension}
+                  </td>
+                  <td
+                    className={`border-x border-accent/30 bg-accent/[0.07] px-5 py-5 text-text ${
+                      last ? "rounded-b-2xl border-b" : ""
+                    }`}
+                  >
+                    {row.values[0]}
+                  </td>
+                  <td className="border-t border-hair px-5 py-5 text-muted">{row.values[1]}</td>
+                  <td className="border-t border-hair px-5 py-5 text-muted">{row.values[2]}</td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>
