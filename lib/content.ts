@@ -120,3 +120,23 @@ export const socials = [
   { label: "GitHub", href: "https://github.com/saad-bhutto" },
   { label: "Email", href: EMAIL_HREF },
 ];
+
+// Third-party platforms & APIs integrated across e-commerce, logistics,
+// analytics and AI work (from the résumés). Icons resolved in the component.
+export const integrations = [
+  { name: "Shopify", description: "Storefront, product & order sync for multi-carrier fulfilment." },
+  { name: "Starshipit", description: "Automated shipping labels & tracking across couriers." },
+  { name: "Machship", description: "Multi-carrier logistics API — shipped an open-source client." },
+  { name: "ShipStation", description: "Real-time order & shipment sync for e-commerce fulfilment." },
+  { name: "Klaviyo", description: "Email & SMS marketing automation tied to store events." },
+  { name: "Stripe", description: "Subscription billing & payments for a multi-tenant SaaS." },
+  { name: "Xero", description: "Zero-data-loss financial sync via serverless middleware." },
+  { name: "Google Analytics", description: "Web analytics feeding a unified experimentation pipeline." },
+  { name: "Amplitude", description: "Product analytics & funnels across three product squads." },
+  { name: "Optimizely", description: "A/B testing & feature experimentation with hybrid gating." },
+  { name: "Algolia", description: "Instant search & discovery powering recommendations." },
+  { name: "AWS Personalize", description: "Real-time recommendation inference — ~30% conversion uplift." },
+  { name: "Slack", description: "Automated competitive-intelligence digests & alerts." },
+  { name: "Datadog", description: "APM alerting wired into deploys — 60% faster MTTR." },
+  { name: "Firebase", description: "Cloud messaging & push for a post-purchase mobile app." },
+];
