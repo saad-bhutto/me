@@ -3,5 +3,6 @@ import Home from "@/app/page";
 
 test("home page renders the name", () => {
   render(<Home />);
-  expect(screen.getByText("Saad Bhutto")).toBeInTheDocument();
+  const footer = screen.getByRole("contentinfo");
+  expect(footer.textContent).toContain("Saad Bhutto");
 });
