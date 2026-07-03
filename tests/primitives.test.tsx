@@ -22,3 +22,26 @@ test("SectionHeading renders an eyebrow and sets id", () => {
   expect(screen.getByText("WHAT I DO")).toBeInTheDocument();
   expect(document.getElementById("services")).not.toBeNull();
 });
+
+test("WordReveal renders plain, non-animated spans when reduced motion is preferred", () => {
+  const original = window.matchMedia;
+  window.matchMedia = ((q: string) => ({
+    matches: true, media: q, onchange: null,
+    addEventListener() {}, removeEventListener() {},
+    addListener() {}, removeListener() {}, dispatchEvent() { return false; },
+  })) as unknown as typeof window.matchMedia;
+
+  try {
+    render(<WordReveal text="I build AI agents" />);
+    const words = document.querySelectorAll("[data-word]");
+    expect(words).toHaveLength(4);
+    expect(screen.getByText(/agents/)).toBeInTheDocument();
+
+    words.forEach((w) => {
+      const style = (w as HTMLElement).getAttribute("style") ?? "";
+      expect(style).not.toMatch(/opacity:\s*0\.12/);
+    });
+  } finally {
+    window.matchMedia = original;
+  }
+});
