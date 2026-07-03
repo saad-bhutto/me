@@ -1,9 +1,8 @@
 "use client";
-import type { JSX } from "react";
 import { motion } from "framer-motion";
 import { usePrefersReducedMotion } from "@/lib/use-prefers-reduced-motion";
 
-type Props = { text: string; className?: string; as?: keyof JSX.IntrinsicElements };
+type Props = { text: string; className?: string };
 
 export function WordReveal({ text, className }: Props) {
   const reduced = usePrefersReducedMotion();
