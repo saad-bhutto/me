@@ -1,6 +1,7 @@
 import { hero } from "@/lib/content";
 import { WordReveal } from "@/components/word-reveal";
 import { PillButton } from "@/components/pill-button";
+import { Reveal } from "@/components/reveal";
 
 export function Hero() {
   return (
@@ -21,16 +22,20 @@ export function Hero() {
         <WordReveal text={hero.line2} tone="bright" className="block text-text" />
       </h1>
 
-      <p className="mx-auto mt-9 max-w-2xl text-lg leading-relaxed text-muted">{hero.subtext}</p>
+      <Reveal delay={0.15}>
+        <p className="mx-auto mt-9 max-w-2xl text-lg leading-relaxed text-muted">{hero.subtext}</p>
+      </Reveal>
 
-      <div className="mt-11 flex flex-wrap items-center justify-center gap-3">
-        <PillButton href={hero.ctaPrimary.href} variant="accent">
-          {hero.ctaPrimary.label}
-        </PillButton>
-        <PillButton href={hero.ctaSecondary.href} variant="dark">
-          {hero.ctaSecondary.label}
-        </PillButton>
-      </div>
+      <Reveal delay={0.3}>
+        <div className="mt-11 flex flex-wrap items-center justify-center gap-3">
+          <PillButton href={hero.ctaPrimary.href} variant="accent">
+            {hero.ctaPrimary.label}
+          </PillButton>
+          <PillButton href={hero.ctaSecondary.href} variant="dark">
+            {hero.ctaSecondary.label}
+          </PillButton>
+        </div>
+      </Reveal>
 
       <a
         href="#work"

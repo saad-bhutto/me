@@ -1,6 +1,7 @@
 import { caseStudies } from "@/lib/content";
 import { SectionHeading } from "@/components/section-heading";
 import { CaseVisual } from "@/components/case-visual";
+import { Reveal } from "@/components/reveal";
 
 export function FeaturedWork() {
   return (
@@ -16,9 +17,9 @@ export function FeaturedWork() {
 
       <div className="mt-14 grid gap-5 md:grid-cols-2">
         {caseStudies.map((c, i) => (
+          <Reveal key={c.title} delay={(i % 2) * 0.1}>
           <article
-            key={c.title}
-            className="group relative overflow-hidden rounded-2xl border border-hair bg-surface/40 p-6 transition-all duration-300 hover:border-white/20 hover:bg-surface/70 md:p-8"
+            className="group relative h-full overflow-hidden rounded-2xl border border-hair bg-surface/40 p-6 transition-all duration-300 hover:border-white/20 hover:bg-surface/70 md:p-8"
           >
             {/* Concept visual for the project */}
             <div className="relative mb-7">
@@ -41,6 +42,7 @@ export function FeaturedWork() {
               ))}
             </div>
           </article>
+          </Reveal>
         ))}
       </div>
     </section>

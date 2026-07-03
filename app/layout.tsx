@@ -66,7 +66,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en-AU" className={interFont.variable}>
       <body>
         <noscript>
-          <style>{`[data-word]{opacity:1 !important;transform:none !important}`}</style>
+          <style>{`[data-word],[data-reveal]{opacity:1 !important;transform:none !important}`}</style>
         </noscript>
         {children}
       </body>

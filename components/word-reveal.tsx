@@ -38,17 +38,22 @@ export function WordReveal({ text, className, tone = "bright" }: Props) {
         <motion.span
           data-word
           key={i}
-          initial={{ opacity: 0.12, y: "0.12em", color: settle }}
+          initial={{ opacity: 0.1, y: "0.16em", color: settle }}
           animate={
             inView
-              ? { opacity: 1, y: "0em", color: [settle, "var(--accent)", settle] }
+              ? {
+                  opacity: 1,
+                  y: "0em",
+                  // Hold on the accent so the color flash is clearly visible.
+                  color: [settle, "var(--accent)", "var(--accent)", settle],
+                }
               : {}
           }
           transition={{
-            duration: 0.5,
-            delay: i * 0.045,
+            duration: 0.7,
+            delay: i * 0.09,
             ease: [0.22, 1, 0.36, 1],
-            color: { duration: 0.6, delay: i * 0.045, times: [0, 0.5, 1] },
+            color: { duration: 1.4, delay: i * 0.09, times: [0, 0.28, 0.5, 1] },
           }}
           style={{ display: "inline-block", marginRight: "0.26em", color: settle }}
         >

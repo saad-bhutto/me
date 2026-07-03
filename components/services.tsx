@@ -1,5 +1,6 @@
 import { services } from "@/lib/content";
 import { SectionHeading } from "@/components/section-heading";
+import { Reveal } from "@/components/reveal";
 
 export function Services() {
   return (
@@ -10,9 +11,9 @@ export function Services() {
 
       <div className="mt-14 grid gap-5 md:grid-cols-2">
         {services.map((s, i) => (
+          <Reveal key={s.title} delay={(i % 2) * 0.1} className="h-full">
           <div
-            key={s.title}
-            className="group relative flex min-h-[240px] flex-col justify-between overflow-hidden rounded-2xl border border-hair bg-surface/40 p-7 transition-all duration-300 hover:border-white/20 hover:bg-surface/70 md:p-9"
+            className="group relative flex h-full min-h-[240px] flex-col justify-between overflow-hidden rounded-2xl border border-hair bg-surface/40 p-7 transition-all duration-300 hover:border-white/20 hover:bg-surface/70 md:p-9"
           >
             <div className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-[radial-gradient(90%_90%_at_0%_0%,rgba(251,65,30,0.08),transparent_60%)]" />
             <div className="relative flex items-start justify-between">
@@ -29,6 +30,7 @@ export function Services() {
               <p className="mt-3 max-w-md text-muted">{s.description}</p>
             </div>
           </div>
+          </Reveal>
         ))}
       </div>
     </section>
