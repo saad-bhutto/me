@@ -4,3 +4,5 @@ out/
 .DS_Store
 .wrangler/
 .dev.vars
+resumes/
+.superpowers/
