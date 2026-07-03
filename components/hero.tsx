@@ -16,9 +16,9 @@ export function Hero() {
         Saad Bhutto · AI-Native Tech Lead · Melbourne, open to remote
       </div>
 
-      <h1 className="font-display mx-auto max-w-4xl text-[2rem] leading-[1.1] sm:text-4xl md:text-5xl lg:text-[3.4rem]">
-        <WordReveal text={hero.line1} tone="muted" className="text-muted" />{" "}
-        <WordReveal text={hero.line2} tone="bright" className="text-text" />
+      <h1 className="font-display mx-auto max-w-5xl text-[1.9rem] leading-[1.12] sm:text-4xl md:text-5xl lg:text-[3.2rem]">
+        <WordReveal text={hero.line1} tone="muted" className="block text-muted" />
+        <WordReveal text={hero.line2} tone="bright" className="block text-text" />
       </h1>
 
       <p className="mx-auto mt-9 max-w-2xl text-lg leading-relaxed text-muted">{hero.subtext}</p>
