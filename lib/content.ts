@@ -115,9 +115,8 @@ export const footer = {
     "Melbourne-based engineering leader building production AI — RAG pipelines, agents and MCP — and the teams that ship it. Open to senior full-time and remote roles.",
 };
 
-// GitHub handle is a best-guess placeholder — confirm/replace with your real URL.
 export const socials = [
   { label: "LinkedIn", href: "https://linkedin.com/in/saadbhutto" },
-  { label: "GitHub", href: "https://github.com/saadbhutto" },
+  { label: "GitHub", href: "https://github.com/saad-bhutto" },
   { label: "Email", href: EMAIL_HREF },
 ];
