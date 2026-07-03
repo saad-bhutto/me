@@ -15,7 +15,7 @@ export function Portrait() {
   }, []);
 
   return (
-    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl border border-hair bg-surface">
+    <div className="relative w-full overflow-hidden rounded-3xl border border-hair bg-surface">
       {/* Ambient accent glow behind the portrait */}
       <div
         aria-hidden
@@ -28,10 +28,10 @@ export function Portrait() {
           src="/portrait.jpg"
           alt="Saad Bhutto — AI-native tech lead and full-stack engineer"
           onError={() => setFailed(true)}
-          className="relative h-full w-full object-cover"
+          className="relative block h-auto w-full"
         />
       ) : (
-        <div className="relative flex h-full w-full flex-col items-center justify-center gap-4">
+        <div className="relative flex min-h-[420px] w-full flex-col items-center justify-center gap-4">
           <span className="font-display text-6xl text-white/80">SB</span>
           <span className="rounded-full border border-hair px-3 py-1 text-xs uppercase tracking-[0.14em] text-muted">
             Headshot goes here
