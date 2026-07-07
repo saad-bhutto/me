@@ -114,6 +114,18 @@ export const contact = {
   location: "Melbourne, VIC",
 };
 
+// Companies worked with — logos live in public/logos, shown on light cards
+// (object-contain) so mixed shapes/colours read consistently on the dark site.
+export const companies = [
+  { name: "Inspiring Vacations", logo: "inspiring-vacations.png" },
+  { name: "AroFlo", logo: "aroflo.png" },
+  { name: "carbar", logo: "carbar.jpg" },
+  { name: "Eva", logo: "eva.png" },
+  { name: "Swell", logo: "swell.png" },
+  { name: "Brand Collective", logo: "brand-collective.png" },
+  { name: "Devkind", logo: "devkind.png" },
+];
+
 export const about = {
   heading: "I lead from inside the codebase.",
   paragraphs: [

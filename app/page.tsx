@@ -3,6 +3,7 @@ import { Hero } from "@/components/hero";
 import { TechStrip } from "@/components/tech-strip";
 import { FeaturedWork } from "@/components/featured-work";
 import { About } from "@/components/about";
+import { Companies } from "@/components/companies";
 import { ComparisonTable } from "@/components/comparison-table";
 import { Services } from "@/components/services";
 import { Impact } from "@/components/impact";
@@ -20,6 +21,7 @@ export default function Home() {
         <TechStrip />
         <FeaturedWork />
         <About />
+        <Companies />
         <ComparisonTable />
         <Services />
         <Impact />
